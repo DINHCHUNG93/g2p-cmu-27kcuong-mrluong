@@ -1,0 +1,42 @@
+I. Cách dùng:
+
+python3 creat-foreign-dict.py <file lẽ của anh lương>
+
+VD: 
+python3 creat-foreign-dict.py 9kForeign_VNPronunciation_fromVXLuong_11Sept_noID.txt
+
+II. Outout:
+
+Kết quả trong file "foreign-MrLuong-And-Cuong-And-CMU.lex", code tự gen ra file này
+---------------
+Tạo Lexicion theo thư tự:
+
+1. Lấy các phiên âm của MrLuong
+
+2. Lấy các phiên âm của Cường book 27k bỏ trùng lặp với MrLuong
+
+3. Lấy các phiên âm của CMU bỏ trùng lặp với MrLuong và Cường
+----------------
+Format file đầu vào:
+
+word1 word2 ... <tab> syllable1 syllable2
+
+VD: cty vingroup <tab> công_ty vin_gờ_rúp
+
+chú ý: <tab> là dấu tab "\t"
+-------------------
+Format đầu ra:
+
+File lexcicon đầu ra có sạng:
+
+word phone1 phone2 ...
+
+word(HUE) phone1 phone2 ...
+
+word(NAM) phone1 phone2 ...
+
+...
+
+Chú ý:
+
+(HUE) (NAM) phiên âm theo cách đọc miền Trung và Nam. Chỉ cách đọc này mới phân biệt tr/ch, s/x
